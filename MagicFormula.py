@@ -13,6 +13,8 @@ resp = requests.get(
     headers={"Authorization": f"Bearer {token}"},
     params={"data_base": "2021-04-01"},
 )
+resp.status_code()  #**
+
 dados = resp.json()
 df = pd.DataFrame(dados)
 
